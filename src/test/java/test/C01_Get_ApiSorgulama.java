@@ -15,31 +15,37 @@ ve content type'inin application/json; charset=utf-8, ve Server isimli Header'in
 ve status Line'in HTTP/1.1 200 OK
 ve response suresinin 5 sn'den kisa oldugunu manuel olarak test ediniz.
  */
-// 1-url belirleyip url adresine gideceğiz
-// 2-expected data verilmişse expected data hazırlanır
-// 3-Actual data alınacak
-// 4-assertion işlemi
+
+
+    // 1-url belirleyip url adresine gideceğiz
+    // 2-expected data verilmişse expected data hazırlanır
+    // 3-Actual data alınacak
+    // 4-assertion işlemi
 
     @Test
     public void get01(){
         // 1-url belirleyip url adresine gideceğiz
-        String url ="https://restful-booker.herokuapp.com/booking/46";
-        // 2-expected data verilmişse expected data hazırlanır
-        // 3-Actual data alınacak
+        String url="https://restful-booker.herokuapp.com/booking/46";
+        // 2-expected data açıkca verilirse belirlenecek
+        // 3-Actuasl Data alınır
+
         Response response=given().when().get(url);
-      // response.prettyPrint();
 
-        System.out.println("Status code: "+response.getStatusCode());
-        System.out.println("Content type: "+response.getContentType());
-        System.out.println("Server Header Degeri: "+response.getHeader("Server"));
-        System.out.println("Status Line: " +response.getStatusLine());
-        System.out.println("Get Time: "+response.getTime());
+        //response.prettyPrint();
+        System.out.println("Status Code: "+response.getStatusCode()); // 200
+        // System.out.println("Status Code: "+response.statusCode()); // 200
+        System.out.println("Content Type: "+response.getContentType()); // application/json; charset=utf-8
+        System.out.println("Server Header Değeri: "+response.getHeader("Server"));
+        System.out.println("Status Line: "+response.getStatusLine()); // HTTP 1.1/ 200 OK
+        System.out.println("Get Time: "+response.getTime()); // least than 5
+        System.out.println("---------------------------------------------------------------------");
+        //System.out.println("Server Header Değeri: "+response.getHeaders());
+
+
+
+
+
+
+
     }
-
 }
-    git init
-    git add README.md
-        git commit -m "first commit"
-        git branch -M main
-        git remote add origin https://github.com/gulsah01/API-T120.git
-        git push -u origin main
