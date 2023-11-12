@@ -29,6 +29,7 @@ public class C08_JSNArrayKullanimi {
      */
     @Test
     public void jSonArray() {
+
         JSONObject ceptel=new JSONObject();
         ceptel.put("type","iPhone");
         ceptel.put("number","0123-4567-8888");
