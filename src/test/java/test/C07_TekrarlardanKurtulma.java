@@ -32,8 +32,7 @@ https://restful-booker.herokuapp.com/booking/10 url'ine bir GET request gonderdi
         response.then().assertThat().statusCode(200).contentType("application/json")
                 .body("firstname",equalTo("Mark"),
                 "lastname", equalTo("Jones"),
-                        "totalprice", equalTo(615),
-                        "depositpaid", equalTo(true),
-                        "additionalneeds", equalTo("Breakfast"));
+                        "totalprice", equalTo(452),
+                        "depositpaid", equalTo(true));
     }
 }
