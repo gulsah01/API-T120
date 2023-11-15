@@ -32,7 +32,7 @@ public class C09_ResponseBodyTesti {
         response.then().assertThat()
                 .statusCode(200)
                 .contentType("application/json")
-                .body("data.id", hasSize(24),
+                .body("data.id",hasSize(24),
                         "data.employee_name",hasItem("Ashton Cox"),
                         "data.employee_age",hasItems(61,40,30));
 
