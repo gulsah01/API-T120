@@ -1,10 +1,11 @@
 package baseUrl;
 
+
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Before;
 
-public class jsonPlaceBaseUrl {
+public class JsonPlaceBaseUrl {
 
     protected RequestSpecification specJsonPlace;
 

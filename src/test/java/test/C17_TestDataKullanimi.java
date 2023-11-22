@@ -1,6 +1,7 @@
 package test;
 
-import baseUrl.jsonPlaceBaseUrl;
+
+import baseUrl.JsonPlaceBaseUrl;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONObject;
@@ -12,7 +13,7 @@ import testDatas.TestDataJSONPlace;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
-public class C17_TestDataKullanimi extends jsonPlaceBaseUrl {
+public class C17_TestDataKullanimi extends JsonPlaceBaseUrl {
      /*
 
 https://jsonplaceholder.typicode.com/posts/22 url'ine bir GET
@@ -55,3 +56,7 @@ response body'sinin asagida verilen ile ayni oldugunu test ediniz
     }
 
 }
+
+
+
+
